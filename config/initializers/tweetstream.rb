@@ -9,6 +9,17 @@ TweetStream.configure do |config|
 end
 
 
-# TweetStream::Client.new.locations('-122.75,36.8,-121.75,37.8') do |status|
-# 	 puts "#{status.text}"
+# TweetStream::Client.new.locations('-125.00','25.0','-70.00','50.00', nil)  do |status|
+# 	m = Tweet.new
+# 	m.text = status.text
+# 	m.created_at = status.created_at
+# 	m.lat = status.geo.latitude
+# 	m.lng = status.geo.longitude
+# 	m.save
+# 	puts "#{status.geo}"
+# end
+
+# TweetStream::Client.new.sample do |status|
+
+#   puts status.geo.coordinates
 # end
