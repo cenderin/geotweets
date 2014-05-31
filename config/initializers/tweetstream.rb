@@ -7,3 +7,8 @@ TweetStream.configure do |config|
   config.oauth_token_secret = ENV['OAUTH_TOKEN_SECRET']
   config.auth_method        = :oauth
 end
+
+
+# TweetStream::Client.new.locations('-122.75,36.8,-121.75,37.8') do |status|
+# 	 puts "#{status.text}"
+# end
