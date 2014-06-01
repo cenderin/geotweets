@@ -1,7 +1,9 @@
 class TweetsController < ApplicationController
 
+
   def index
-  	@tweet = Tweet.all
+    @tweets = Tweet.search(params).desc(:created_at).page(params[:page])
   end
 
+  
 end

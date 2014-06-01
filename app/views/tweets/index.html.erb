@@ -1,2 +1,27 @@
-<h1>Tweets#index</h1>
-<p>Find me in app/views/tweets/index.html.erb</p>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<br>
+		<form class="form-inline" role="form" action="<%= tweets_url %>">
+			<div class="form-group">
+				<input class="form-control" type="text" id="long" name="long" placeholder="longitude" value="<%= params[:long] || -122.405  %>">
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" id="lat" name="lat" placeholder="latitude" value="<%= params[:lat] || 37.786 %>">
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" id="radius" name="radius" placeholder="Radius in meters" value="<%= params[:radius] %>">
+			</div>
+
+			<button type="submit" class="btn btn-success">Search</button>
+		</form><br>
+		  
+		<p>Tweets found: <%= @tweets.count %> </p>
+		<ul>
+			<% @tweets.each do |tweet| %>
+				<div class="well"><li><%= tweet.text %> <%= tweet.location %></li></div>
+			<% end %>
+		</ul>
+
+		<%= paginate @tweets %>
+	</div>
+</div>
