@@ -15,4 +15,3 @@ class Tweet
     end
   end
 end
-

@@ -1,0 +1,1 @@
+Mongo & Twitter used to download tweets while recording location.  Whole point of the exercise is to be able to search all the tweets by coordinates. 
