@@ -12,3 +12,9 @@
  *= require bootstrap_and_overrides
  *= require_tree .
  */
+.form-group{
+	margin-left: 100px;
+}
+button.btn.btn-success {
+	margin-bottom: 10px;
+}
