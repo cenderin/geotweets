@@ -97,6 +97,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     method_source (0.8.2)
     mime-types (1.25.1)
+    mongo (1.10.1)
+      bson (~> 1.10.1)
     mongoid (3.1.6)
       activemodel (~> 3.2)
       moped (~> 1.4)
@@ -198,6 +200,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   less-rails
+  mongo
   mongoid
   pry
   rails (= 3.2.17)
