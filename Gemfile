@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 ruby '2.0.0'
 gem 'pg'
 gem 'rails', '3.2.17'
@@ -23,4 +22,7 @@ group :development do
   gem 'better_errors'
   gem 'pry'
 end
-
+group :test do
+  gem 'rspec-rails'
+  gem "factory_girl_rails", "~> 4.2.1"
+end
