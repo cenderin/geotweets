@@ -1,30 +1,21 @@
-<div class="row">
-		<br>
-		<form>
-			<div class="form-group ">
-				<input class="form-control" type="text" id="long" name="long" placeholder="longitude" value="<%= params[:long] %>">
-				<input class="form-control" type="text" id="lat" name="lat" placeholder="latitude" value="<%= params[:lat] %>">
-				<input class="form-control" type="text" id="radius" name="radius" placeholder="Radius" value="<%= params[:radius] %>">
+	<br>
+	<form>
+		<div class="form-group ">
+			<input class="form-control" type="text" id="long" name="long" placeholder="longitude" value="<%= params[:long] %>">
+			<input class="form-control" type="text" id="lat" name="lat" placeholder="latitude" value="<%= params[:lat] %>">
+			<input class="form-control" type="text" id="radius" name="radius" placeholder="Radius" value="<%= params[:radius] %>">
 			<button type="submit" class="btn btn-success">Search</button>
 		</div>
-
-		</form><br>
-
-		<ul>
-				<p>Tweets found: <%= @tweets.count %> </p>
-
-			<% @tweets.each do |tweet| %>
-				<div class="well ">
-				<div class="tweet_user">
-				<%= tweet.user %></div>
-				<%= tweet.text %> <br/>
-				<%= tweet.location%><br/>
-
-				<%= time_ago_in_words(tweet.created_at) %>	
-												</div>
-
+	</form><br>
+		<p>Tweets found: <%= @tweets.count %> </p>
+		<% @tweets.each do |tweet| %>
+		<div class="well ">
+			<div class="tweet_user">
+			<%= tweet.user %></div>
+			<%= tweet.text %> <br/>
+			<%= tweet.location%><br/>
+			<%= time_ago_in_words(tweet.created_at) %>
+		</div>
 		<% end %>
-		</ul>
-		<%= paginate @tweets %>
-	</div>
 </div>
+<%= paginate @tweets %>

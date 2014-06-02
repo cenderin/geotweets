@@ -10,6 +10,7 @@ class Tweet
     if params[:long].present?
     	# self.geo_near([params[:long].to_f, params[:lat].to_f]).max_distance(params[:radius].to_f)
      self.where(:location => { "$near" => [params[:long].to_f, params[:lat].to_f], '$maxDistance' => params[:radius].to_f.fdiv(69)})
+     self.scoped(limit: 25)
     else
     	self.all
     end
