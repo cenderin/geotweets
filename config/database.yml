@@ -1,0 +1,15 @@
+production:
+  adapter: postgresql
+  database: postgres_production
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+  host: localhost
+
+development:
+  adapter: postgresql
+  database: postgres_production
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+  host: localhost

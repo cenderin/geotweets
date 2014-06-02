@@ -109,6 +109,7 @@ GEM
     multipart-post (2.0.0)
     naught (1.0.0)
     origin (1.1.0)
+    pg (0.17.1)
     polyglot (0.3.5)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -202,6 +203,7 @@ DEPENDENCIES
   less-rails
   mongo
   mongoid
+  pg
   pry
   rails (= 3.2.17)
   sass-rails (~> 3.2.3)
