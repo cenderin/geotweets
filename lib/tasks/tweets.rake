@@ -4,7 +4,7 @@ desc "use tweetstream to save all tweets"
 task "begin_save" => :environment do
   client = TweetStream::Client.new
 
-  client.locations(-180,-90,180,90) do |status|
+  client.locations(-125,25,-70,50) do |status|
     if status.geo?
       @tweet = Tweet.new
       @tweet.text = status.text
